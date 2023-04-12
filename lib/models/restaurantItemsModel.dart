@@ -30,6 +30,7 @@ class RestaurantItem {
     required this.name,
     required this.desc,
     required this.color,
+    required this.quality,
     required this.image,
   });
 
@@ -37,6 +38,7 @@ class RestaurantItem {
   final String name;
   final String desc;
   final String color;
+  final double quality;
   final String image;
 
   factory RestaurantItem.fromJson(Map<String, dynamic> json) => RestaurantItem(
@@ -44,6 +46,7 @@ class RestaurantItem {
     name: json["name"],
     desc: json["desc"],
     color: json["color"],
+    quality: json["quality"],
     image: json["image"],
   );
 
@@ -52,6 +55,7 @@ class RestaurantItem {
     "name": name,
     "desc": desc,
     "color": color,
+    "quality": quality,
     "image": image,
   };
 }
