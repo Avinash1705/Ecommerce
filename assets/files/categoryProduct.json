@@ -1,0 +1,26 @@
+{
+  "restaurantItems": [
+    {
+      "id": 1,
+      "name": "Chaayos",
+      "desc": "Best Tea",
+      "color": "#33505a",
+      "image": "https://cdn.shopify.com/s/files/1/0537/1104/4798/files/Chaayos_Logo_a41a4981-896a-411b-b663-c500726a842c.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Pizza Hut",
+      "desc": "Explore our incredible menu of tasty food and drinks options",
+      "color": "#00ac51",
+      "image": "https://cdn.shopify.com/s/files/1/0537/1104/4798/files/Chaayos_Logo_a41a4981-896a-411b-b663-c500726a842c.jpg"
+    }
+  ,
+    {
+      "id": 3,
+      "name": "Burger",
+      "desc": "A hamburger, or simply burger, is a sandwich consisting ",
+      "color": "#00ac51",
+      "image": "https://cdn.shopify.com/s/files/1/0537/1104/4798/files/Chaayos_Logo_a41a4981-896a-411b-b663-c500726a842c.jpg"
+    }
+  ]
+}
