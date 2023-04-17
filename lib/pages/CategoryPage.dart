@@ -22,16 +22,27 @@ class _CategoryPageState extends State<CategoryPage> {
 
   @override
   Widget build(BuildContext context) {
-
-    return Scaffold(
-      body: restorentItemList == null
-          ? const CircularProgressIndicator().centered()
-          : CategoryPageList(listItems: restorentItemList),
+    return SafeArea(
+      child: Scaffold(
+        appBar: AppBar(),
+        body: restorentItemList == null
+            ? const CircularProgressIndicator().centered()
+            : CategoryPageList(listItems: restorentItemList).p4(),
+        drawer: const Drawer(),
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: 0,
+          items: [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: "Cart"),
+            BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
+          ],
+        ),
+      ),
     );
   }
 
-  loadData()  {
-     _loadJson.loadCatalogList(context).then((value) {
+  loadData() {
+    _loadJson.loadCatalogList(context).then((value) {
       setState(() {
         restorentItemList = value;
       });
