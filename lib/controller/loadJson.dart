@@ -9,9 +9,10 @@ class LoadJson {
     late RestaurantItemsModel restaurantItemsModel;
     try {
       //json
-      var responce = await rootBundle.loadString("/files/categoryProduct.json");
+      var responce = await rootBundle.loadString("assets/files/categoryProduct.json");
       //object
       restaurantItemsModel = restaurantItemsModelFromJson(responce);
+
     } catch (exception) {
       // Future.delayed(Duration(seconds: 3));
       VxToast.show(context, msg: exception.toString());

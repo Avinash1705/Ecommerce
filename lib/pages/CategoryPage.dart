@@ -1,5 +1,3 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:rest/widget/CategoryPageList.dart';
 import 'package:rest/controller/loadJson.dart';
@@ -24,6 +22,7 @@ class _CategoryPageState extends State<CategoryPage> {
 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
       body: restorentItemList == null
           ? const CircularProgressIndicator().centered()
@@ -33,7 +32,9 @@ class _CategoryPageState extends State<CategoryPage> {
 
   loadData()  {
      _loadJson.loadCatalogList(context).then((value) {
-      restorentItemList = value;
+      setState(() {
+        restorentItemList = value;
+      });
     });
   }
 }
