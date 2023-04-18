@@ -30,6 +30,7 @@ class RestaurantItemsList {
     required this.restaurantItemsId,
     required this.name,
     required this.desc,
+    required this.detailDesc,
     required this.price,
     required this.color,
     required this.image,
@@ -39,6 +40,7 @@ class RestaurantItemsList {
   final int restaurantItemsId;
   final String name;
   final String desc;
+  final String detailDesc;
   final int price;
   final String color;
   final String image;
@@ -48,6 +50,7 @@ class RestaurantItemsList {
     restaurantItemsId: json["restaurantItemsId"],
     name: json["name"],
     desc: json["desc"],
+    detailDesc: json["detailDesc"],
     price: json["price"],
     color: json["color"],
     image: json["image"],
@@ -58,6 +61,7 @@ class RestaurantItemsList {
     "restaurantItemsId": restaurantItemsId,
     "name": name,
     "desc": desc,
+    "detailDesc": detailDesc,
     "price": price,
     "color": color,
     "image": image,

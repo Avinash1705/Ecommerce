@@ -5,6 +5,7 @@
       "restaurantItemsId": 1,
       "name": "Chai Masala",
       "desc": "5 Spice chai masala",
+      "detailDesc": "Food is any substance consumed by an organism for nutritional support. Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. Wikipedia",
       "price": 249,
       "color": "#33505a",
       "image": "https://cdn.shopify.com/s/files/1/0537/1104/4798/products/2_377bb44d-8345-46d0-9add-4fa42adfca6d.jpg"
@@ -15,6 +16,7 @@
       "name": "Ilaichi Chai",
       "desc": "Caradomom Seed Powder",
       "price": 399,
+      "detailDesc": "Food is any substance consumed by an organism for nutritional support. Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. Wikipedia",
       "color": "#00ac51",
       "image": "https://cdn.shopify.com/s/files/1/0537/1104/4798/products/7_8.jpg"
     },
@@ -23,6 +25,7 @@
       "restaurantItemsId": 1,
       "name": "Desi Chai",
       "desc": "Assam Gold Tea",
+      "detailDesc": "Food is any substance consumed by an organism for nutritional support. Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. Wikipedia",
       "price": 1099,
       "color": "#e0bfae",
       "image": "https://cdn.shopify.com/s/files/1/0537/1104/4798/products/Product-White-front--mock.jpg"
@@ -32,6 +35,7 @@
       "restaurantItemsId": 1,
       "name": "Herbal Tea",
       "desc": "God's Chai Herbal Tea",
+      "detailDesc": "Food is any substance consumed by an organism for nutritional support. Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. Wikipedia",
       "price": 500,
       "color": "#544ee4",
       "image": "https://cdn.shopify.com/s/files/1/0537/1104/4798/products/2_1_1.jpg"
@@ -41,7 +45,8 @@
       "id": 5,
       "restaurantItemsId": 2,
       "name": "Margherita",
-      "desc": "Pizza topped with our herb-infused signature pan sauce and 100% mozzarella cheese. A classic treat for all cheese lovers out there!",
+      "desc": "Pizza topped with our herb-infused ",
+      "detailDesc": "Food is any substance consumed by an organism for nutritional support. Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. Wikipedia",
       "price": 250,
       "color": "#544ee4",
       "image": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/margherita.90f9451fd66871fb6f9cf7d506053f18.1.jpg"
@@ -51,7 +56,8 @@
       "id": 6,
       "restaurantItemsId": 2,
       "name": "Tandoori Paneer",
-      "desc": "It's our signature. Spiced Paneer, Crunchy Onions & Green Capsicum, spicy Red Paprika with delicious Tandoori Sauce and 100% mozzarella cheese!",
+      "desc": "It's our signature. Spiced Paneer",
+      "detailDesc": "Food is any substance consumed by an organism for nutritional support. Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. Wikipedia",
       "price": 251,
       "color": "#544ee4",
       "image": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/tandoori-paneer.4ef45717e972cf45b43c010e3cde5a22.1.jpg"
@@ -61,7 +67,8 @@
       "id": 7,
       "restaurantItemsId": 2,
       "name": "Veggie Supreme",
-      "desc": "Pizza topped with our herb-infused signature pan sauce and 100% mozzarella cheese. A classic treat for all cheese lovers out there!",
+      "desc": "Pizza topped with ",
+      "detailDesc": "Food is any substance consumed by an organism for nutritional support. Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. Wikipedia",
       "price": 252,
       "color": "#544ee4",
       "image": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/veggie-supreme.bc8dd369182b636ff171077efa53c344.1.jpg"
@@ -71,7 +78,8 @@
       "id": 8,
       "restaurantItemsId": 3,
       "name": "Double Paneer Supreme",
-      "desc": "Pizza topped with our herb-infused signature pan sauce and 100% mozzarella cheese. A classic treat for all cheese lovers out there!",
+      "desc": "Pizza topped with our herb",
+      "detailDesc": "Food is any substance consumed by an organism for nutritional support. Food is usually of plant, animal, or fungal origin, and contains essential nutrients, such as carbohydrates, fats, proteins, vitamins, or minerals. Wikipedia",
       "price": 253,
       "color": "#544ee4",
       "image": "https://api.pizzahut.io/v1/content/en-in/in-1/images/pizza/double-paneer-supreme.3cb382529b41d14d4a041b5cc5e64341.1.jpg"

@@ -1,17 +1,19 @@
 //@dart =2.9
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rest/core/MyStore.dart';
 import 'package:rest/pages/CategoryPage.dart';
 import 'package:rest/pages/SubItemListPage.dart';
 import 'package:rest/routes/MyRoutes.dart';
-import 'package:rest/utils/MyTheme.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key key}) : super(key: key);
+  MyApp({Key key}) : super(key: key);
+  // MyStore myStore = MyStore();
+  var myStore = Get.put(MyStore());
 
   @override
   Widget build(BuildContext context) {
