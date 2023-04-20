@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rest/core/MyStore.dart';
 import 'package:rest/widget/CategoryPageList.dart';
 import 'package:rest/controller/loadJson.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -33,7 +35,8 @@ class _CategoryPageState extends State<CategoryPage> {
           currentIndex: 0,
           items: [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-            BottomNavigationBarItem(icon: Icon(Icons.shopping_cart), label: "Cart"),
+            BottomNavigationBarItem(
+                icon: Icon(Icons.shopping_cart), label: "Cart"),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile")
           ],
         ),

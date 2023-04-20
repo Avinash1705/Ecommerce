@@ -4,6 +4,8 @@ import 'package:get/get.dart';
 import 'package:rest/controller/loadSubItem.dart';
 import 'package:rest/core/MyStore.dart';
 import 'package:rest/models/categorySubItemsModel.dart';
+import 'package:rest/pages/CartPage.dart';
+import 'package:rest/pages/DetailPage.dart';
 import 'package:rest/utils/dimension.dart';
 import 'package:velocity_x/velocity_x.dart';
 
@@ -19,6 +21,7 @@ class _SubItemListPageState extends State<SubItemListPage> {
 
   // var outputList;
   var data;
+  var myStore = Get.find<MyStore>();
 
   LoadSubItemController loadSubItemController =
       Get.put(LoadSubItemController());
@@ -39,8 +42,20 @@ class _SubItemListPageState extends State<SubItemListPage> {
           : ListView.builder(
               itemCount: outputList.length,
               itemBuilder: (context, index) {
-                return CatelogSubItem(catelog: outputList[index]);
+                return CatelogSubItem(
+                    catelog: outputList[index], myStore: myStore);
               }),
+      floatingActionButton: Obx(
+        () => FloatingActionButton(
+          onPressed: () {
+            Get.to(CartPage());
+          },
+          backgroundColor: Colors.grey,
+          hoverColor: Colors.deepOrange,
+          tooltip: "Avi",
+          child: const Icon(CupertinoIcons.shopping_cart),
+        ).badge(count: myStore.cartLength,color: Colors.blue),
+      ),
     );
   }
 
@@ -61,15 +76,20 @@ class _SubItemListPageState extends State<SubItemListPage> {
 
 class CatelogSubItem extends StatelessWidget {
   final RestaurantItemsList catelog;
-   CatelogSubItem({Key? key, required this.catelog}) : super(key: key);
-  var myStore = Get.find<MyStore>();
-    // MyStore myStore = Get.put(MyStore());
+  final MyStore myStore;
+
+  CatelogSubItem({Key? key, required this.catelog, required this.myStore})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        //
+        print("clicked item ${catelog}");
+        // Get.to(DetailPage(), arguments: [catelog]);
+        Get.to(DetailPage(
+          argumentCat: catelog,
+        ));
       },
       child: Container(
         child: Row(
@@ -112,11 +132,12 @@ class CatelogSubItem extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Icon(CupertinoIcons.minus).onTap(() {
-                      print("minus");
-                      myStore.removeItem(catelog);
+                      if (myStore.cartItem.contains(catelog)) {
+                        myStore.removeItem(catelog);
+                      }
                     }),
                     SizedBox(width: MyDimensions.defaultPadding),
-                    Obx(() => "${myStore.cartItem.length}".text.make()),
+                    Obx(() => "${myStore.countsItems(catelog)}".text.make()),
                     SizedBox(width: MyDimensions.defaultPadding),
                     Icon(CupertinoIcons.add).onTap(() {
                       myStore.addItem(catelog);

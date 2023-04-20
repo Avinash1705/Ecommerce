@@ -1,4 +1,6 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rest/core/MyStore.dart';
 import 'package:rest/models/restaurantItemsModel.dart';
 import 'package:rest/widget/ratingBar.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -12,11 +14,13 @@ class CategoryPageList extends StatelessWidget {
   
   @override
   Widget build(BuildContext context) {
-    return ListView.builder(
-        shrinkWrap: true,
-        itemCount: listItems.length,
-        itemBuilder: (context, position) =>
-            CatelogItem(catelog: listItems[position]));
+    return Scaffold(
+      body: ListView.builder(
+          shrinkWrap: true,
+          itemCount: listItems.length,
+          itemBuilder: (context, position) =>
+              CatelogItem(catelog: listItems[position])),
+    );
   }
 }
 
@@ -28,7 +32,6 @@ class CatelogItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return
       InkWell(
         onTap: (){
