@@ -4,6 +4,7 @@ import 'package:rest/models/categorySubItemsModel.dart';
 
 class MyStore extends GetxController {
   Map resp = {};
+  int totalCartPrice = 0  ;
 
   var cartItem = <RestaurantItemsList>[].obs;
   List<CartModelTest> weightData = [];
@@ -15,7 +16,7 @@ class MyStore extends GetxController {
   }
 
   removeItem(item) {
-    cartItem.remove(item);
+    cartItem.remove(item).obs;
   }
 
   checkIfItemExits(RestaurantItemsList element) {
@@ -46,11 +47,16 @@ class MyStore extends GetxController {
         resp[items] = count;
       }
     }
+    //map to list conversion
     weightData =
     resp.entries.map((entry) =>
         CartModelTest(count: entry.value, restaurantItemsList: entry.key))
         .toList();
-    return resp[item] == null ? 0 : resp[item];
+
+    // total price calculate
+    totalCartPrice = weightData.fold(0, (totalPrice, current) => totalPrice + current.restaurantItemsList.price*current.count);
+
+    return resp[item] ?? 0;
   }
 // listCartConversion(){
 //   List listCart = [];
